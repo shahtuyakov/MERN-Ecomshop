@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { popularProducts } from "../data";
 import Product from "./Product";
 import axios from "axios";
+import { publicRequest } from "../requestMethods";
+
 
 const Container = styled.div`
     padding: 20px;
@@ -16,9 +18,9 @@ const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   //--------------------------------------------------
-  const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
-  })
+//   const axiosInstance = axios.create({
+//     baseURL: process.env.REACT_APP_API_URL,
+//   })
 
   //--------------------------------------------------
 
@@ -26,7 +28,7 @@ const Products = ({ cat, filters, sort }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axiosInstance.get( cat
+        const res = await publicRequest.get( cat
           ? `/product?category=${cat}`
           : "/api/product"
         );
