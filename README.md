@@ -16,13 +16,13 @@ This is an eCommerce web application created with MongoDb Express React NodeJS S
 
 # Technologies
 
-MongoDB and Mongoose
-React.JS
-Redux
-Node.js
-Express.js
-Stripe API
-Nginx
-Styled-components 
+* MongoDB and Mongoose
+* React.JS
+* Redux
+* Node.js
+* Express.js
+* Stripe API
+* Nginx
+* Styled-components 
 
 
